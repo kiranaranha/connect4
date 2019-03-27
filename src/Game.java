@@ -1,14 +1,21 @@
 import java.util.Scanner;
 public class Game {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your age");
-        int age = sc.nextInt();
+        int [] [] listTwo = new int [5][5];
+        // 2 Dimensional array
+        int x = 0;
+        int y = 0;
+        while (x < 5) {
+            listTwo[x][y] = (int)(Math.random()*10);
 
-        if(sc.hasNextInt()) {
-            int input = sc.nextInt();
-        } else {
-            System.out.print("Not a number!");
+            while (y <5){
+                listTwo [x] [y] = (int)(Math.random()*10);
+                System.out.print(listTwo[x][y]+" | ");
+                y++;
+            }
+            System.out.println("");
+            y=0;
+            x++;
         }
     }
 }
